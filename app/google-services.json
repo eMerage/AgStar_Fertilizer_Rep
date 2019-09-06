@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "692709322621",
+    "firebase_url": "https://agstar-fertilizer-user.firebaseio.com",
+    "project_id": "agstar-fertilizer-user",
+    "storage_bucket": "agstar-fertilizer-user.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:692709322621:android:2ae471b84ad74f64",
+        "android_client_info": {
+          "package_name": "project.emarge.fertilizerrep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "692709322621-1b98cv1h2dgikj08hedni08q27admo54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-ZWv9beH5o07WJxImgxRzucNC1kAJyNc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "692709322621-1b98cv1h2dgikj08hedni08q27admo54.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

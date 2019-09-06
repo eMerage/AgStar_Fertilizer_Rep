@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="newVisits"
+                type="project.emarge.fertilizerrep.viewModels.visits.VisitsViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+<RelativeLayout
+
+        android:id="@+id/relativelayoutdailogmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog_background">
+
+
+    <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="VISITS"
+            app:fontFamily="@font/roboto_bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" android:layout_marginLeft="10dp"/>
+
+
+    <TextView
+            android:id="@+id/textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview1"
+            app:fontFamily="@font/roboto"
+            android:layout_marginTop="10dp"
+            android:text="SELECT DEALER"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp" android:layout_marginLeft="10dp"/>
+
+
+
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview2">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view_search"
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+
+                        app:cardBackgroundColor="#ffffff">
+                    <RelativeLayout
+                            android:id="@+id/relativeLayout_header_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:elevation="5dp">
+                        <RelativeLayout
+                                android:id="@+id/relativelayout_serach_doc"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp">
+                            <ImageView
+                                    android:id="@+id/imageView_rep_search"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingRight="10dp"
+                                    android:src="@drawable/ic_search_black"/>
+
+                            <EditText
+                                    android:id="@+id/editText_newvisits_dealer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toStartOf="@+id/imageView_rep_search"
+                                    android:layout_toLeftOf="@+id/imageView_rep_search"
+                                    android:hint="Search Dealer"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="#00000000"
+                                    app:fontFamily="@font/roboto_thin"
+                                    android:textColorHint="#000"
+
+
+                                    android:textSize="15sp"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+                <RelativeLayout
+                        android:id="@+id/relativeLayout_recyclerView_dealerstovisits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        android:layout_below="@id/card_view_search">
+                    <TextView
+                            android:id="@+id/textview_no_dealerstovisits"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:fontFamily="@font/roboto_bold"
+                            android:text="Please wait ,Dealers are loading... "
+                            android:visibility="visible"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp"/>
+
+                    <ProgressBar
+                            style="?android:attr/progressBarStyle"
+                            android:id="@+id/progressBar_recyclerView_dealerstovisits"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_toEndOf="@+id/textview_no_dealerstovisits"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/textview_no_dealerstovisits"/>
+
+                </RelativeLayout>
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView_dealers"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="invisible"
+                        android:orientation="horizontal"
+                        tools:listitem="@layout/listview_visits_dealers"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:layout_below="@+id/card_view_search"
+                        android:layout_height="wrap_content"/>
+
+
+                <TextView
+                        android:id="@+id/textview3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/recyclerView_dealers"
+                        app:fontFamily="@font/roboto"
+                        android:layout_marginTop="5dp"
+                        android:text="Is this a courtesy visit ?"
+                        android:textColor="#000000"
+                        android:textSize="15sp" android:layout_marginLeft="10dp"/>
+
+
+                <RadioGroup
+                        android:id="@+id/radioGroup1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textview3"
+                        android:layout_marginLeft="10dp"
+                        android:onCheckedChanged="@{newVisits.onIsCourtesyTypeChanged}"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                    <RadioButton
+                            android:id="@+id/radioButton1"
+                            android:layout_width="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:layout_below="@+id/editText2"
+                            android:fontFamily="@font/roboto_light"
+                            android:text="Yes" />
+
+
+                    <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:layout_below="@+id/editText2"
+                            android:fontFamily="@font/roboto_light"
+                            android:text="No" />
+
+
+                </RadioGroup>
+
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:gravity="start|top"
+                        android:hint="Remark"
+                        app:fontFamily="@font/roboto_light"
+                        android:layout_below="@+id/radioGroup1"
+                        android:ems="10"
+                        android:visibility="@{newVisits.isRemarkEditTextVisibale ? View.VISIBLE : View.GONE}"
+                        android:text="@={newVisits.editTextRemark}"
+                        android:id="@+id/editText3"
+                        android:textSize="15sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp" android:layout_marginLeft="10dp" android:layout_marginTop="10dp"/>
+
+
+
+                <ProgressBar
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="20dp"
+                        android:indeterminate="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/editText3"/>
+
+
+                <Button
+                        android:text="ADD VISIT"
+                        android:background="@drawable/button_state_list_animator"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/editText3"
+                        app:fontFamily="@font/roboto_light"
+                        android:visibility="@{newVisits.addBtnVisibility ? View.VISIBLE : View.GONE}"
+                        android:onClick="@{()->newVisits.onClickVisitsAdd()}"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="20dp"
+                        android:id="@+id/button"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+</layout>
+
+

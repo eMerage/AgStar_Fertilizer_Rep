@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relativelayoutdailogmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog_background">
+
+
+
+    <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/roboto"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="SELECT ACTION"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp" android:layout_marginLeft="10dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/textview1">
+
+
+        <ImageView
+            android:id="@+id/ImageView_imageoption_cam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/divider"
+            android:src="@drawable/ic_camera_green"
+            android:layout_toLeftOf="@+id/divider" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+
+        <ImageView
+            android:id="@+id/ImageView_imageoption_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/divider"
+            android:layout_toRightOf="@+id/divider"
+            android:src="@drawable/ic_gallery_green" />
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
+
+
+

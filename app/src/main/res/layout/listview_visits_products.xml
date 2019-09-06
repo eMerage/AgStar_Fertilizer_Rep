@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    style="@style/CardViewStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+            android:id="@+id/relativeLayout_header_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:elevation="5dp">
+
+
+        <TextView
+                android:id="@+id/textview_visitproduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativelayout_date"
+                android:layout_marginLeft="90dp"
+                app:fontFamily="@font/roboto"
+                android:layout_marginTop="5dp"
+                android:text="Product : "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible" android:layout_marginRight="10dp"/>
+
+
+        <TextView
+                android:id="@+id/textview_product_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontFamily="@font/roboto"
+                android:layout_alignStart="@+id/textview_visitproduct"
+                android:layout_alignLeft="@+id/textview_visitproduct"
+                android:layout_alignTop="@+id/montserratRegular5"
+                android:maxLines="1"
+                android:text="Product : "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+
+        <TextView
+                android:id="@+id/montserratRegular3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativelayout_date"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                app:fontFamily="@font/roboto"
+                android:layout_marginLeft="10dp"
+                android:text="Product : "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible" android:layout_marginTop="5dp"/>
+
+
+        <TextView
+                android:id="@+id/montserratRegular5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/montserratRegular3"
+                android:layout_alignStart="@+id/montserratRegular3"
+                android:layout_alignLeft="@+id/montserratRegular3"
+                android:layout_marginTop="5dp"
+                app:fontFamily="@font/roboto"
+                android:text="Quantity : "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible" android:layout_marginBottom="5dp"/>
+
+    
+
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+

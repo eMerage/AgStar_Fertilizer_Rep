@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="orderconfirmation"
+                type="project.emarge.fertilizerrep.viewModels.orderconfirmations.OrderConfirmationViewModel"/>
+
+        <import type="android.view.View"/>
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer_layout_orderconfirmation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            tools:openDrawer="start">
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".views.activitys.VisitsActivity">
+
+            <com.google.android.material.appbar.AppBarLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:theme="@style/AppTheme.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar_orderconfirmation"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/colorPrimary"
+                        app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="?attr/actionBarSize">
+
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/swiperefresh_order_confirmation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+                        <TextView
+                                android:id="@+id/textview_notconfrimorders"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:fontFamily="@font/roboto_bold"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="250dp"
+                                android:text="Please wait ,Orders are loading... "
+                                android:visibility="visible"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp"/>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView_notconfrim_orders"
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                android:layout_height="match_parent"/>
+
+
+                        <ProgressBar
+                                style="?android:attr/progressBarStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/progressBar"
+                                android:indeterminate="true"
+                                android:layout_centerInParent="true"
+                                android:visibility="@{orderconfirmation.isLoading ? View.VISIBLE : View.GONE}"
+                                android:layout_marginTop="30dp"/>
+
+
+                    </RelativeLayout>
+
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </RelativeLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        <com.google.android.material.navigation.NavigationView
+                android:id="@+id/nav_view_orderconfirmation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:fitsSystemWindows="true"
+                app:headerLayout="@layout/nav_header_visits"
+                app:menu="@menu/activity_visits_drawer"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

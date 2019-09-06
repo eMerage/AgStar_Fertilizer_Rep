@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                   android:id="@+id/card_view"
+                                   style="@style/CardViewStyle"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_alignParentTop="true"
+                                   android:layout_centerVertical="true"
+                                   android:layout_marginLeft="5dp"
+                                   android:layout_marginRight="5dp"
+                                   android:layout_marginTop="10dp">
+
+    <RelativeLayout
+            android:id="@+id/relativeLayout_header_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:elevation="5dp">
+
+
+
+
+        <TextView
+                android:id="@+id/montserratRegular3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativelayout_date"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                app:fontFamily="@font/roboto_bold"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Visit Code  "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+
+        <TextView
+                android:id="@+id/textview_notconfrim_orders_visitcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativelayout_date"
+                android:layout_marginLeft="100dp"
+                app:fontFamily="@font/roboto_light"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+
+        <TextView
+                android:id="@+id/montserratRegular5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/montserratRegular3"
+                android:layout_alignStart="@+id/montserratRegular3"
+                android:layout_alignLeft="@+id/montserratRegular3"
+                android:layout_marginTop="5dp"
+                app:fontFamily="@font/roboto_bold"
+                android:text="Dealer  "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+
+
+        <TextView
+                android:id="@+id/textview_notconfrim_orders_dealer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontFamily="@font/roboto_light"
+                android:layout_alignStart="@+id/textview_notconfrim_orders_visitcode"
+                android:layout_alignLeft="@+id/textview_notconfrim_orders_visitcode"
+                android:layout_alignTop="@+id/montserratRegular5"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+
+
+        <TextView
+                android:id="@+id/montserratRegular51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/montserratRegular5"
+                android:layout_alignStart="@+id/montserratRegular5"
+                android:layout_alignLeft="@+id/montserratRegular5"
+                android:layout_marginTop="5dp"
+                app:fontFamily="@font/roboto_bold"
+                android:text="Dealer Code  "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+
+
+
+        <TextView
+                android:id="@+id/textview_notconfrim_orders_dealer_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontFamily="@font/roboto_light"
+                android:layout_alignStart="@+id/textview_notconfrim_orders_visitcode"
+                android:layout_alignLeft="@+id/textview_notconfrim_orders_visitcode"
+                android:layout_alignTop="@+id/montserratRegular51"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+
+
+
+
+        <TextView
+                android:id="@+id/montserratRegular8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/montserratRegular51"
+                android:layout_alignStart="@+id/montserratRegular5"
+                android:layout_alignLeft="@+id/montserratRegular51"
+                android:layout_marginTop="5dp"
+                app:fontFamily="@font/roboto_bold"
+                android:text="Order Code  "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+
+        <TextView
+                android:id="@+id/textview_notconfrim_orders_ordercode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontFamily="@font/roboto_light"
+                android:layout_alignStart="@+id/textview_notconfrim_orders_visitcode"
+                android:layout_alignLeft="@+id/textview_notconfrim_orders_visitcode"
+                android:layout_alignTop="@+id/montserratRegular8"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/montserratRegular9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/montserratRegular8"
+            android:layout_alignStart="@+id/montserratRegular5"
+            android:layout_alignLeft="@+id/montserratRegular51"
+            android:layout_marginTop="5dp"
+            app:fontFamily="@font/roboto_bold"
+            android:text="Order Date  "
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:visibility="visible"/>
+
+
+        <TextView
+            android:id="@+id/textview_notconfrim_orders_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/roboto_light"
+            android:layout_alignStart="@+id/textview_notconfrim_orders_visitcode"
+            android:layout_alignLeft="@+id/textview_notconfrim_orders_visitcode"
+            android:layout_alignTop="@+id/montserratRegular9"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:visibility="visible"/>
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/textview_notconfrim_orders_date">
+
+
+            <EditText
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:layout_centerVertical="true"
+                    android:hint="Code"
+                    app:fontFamily="@font/roboto_light"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+                    android:id="@+id/editText_dialogorderconfimations_confirmation_code"/>
+
+
+            <Button
+                    android:text="confirm"
+                    android:background="@drawable/button_state_list_animator"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/recyclerView_dialogorderconfimations_orders"
+                    app:fontFamily="@font/roboto_light"
+                    android:layout_toEndOf="@+id/editText_dialogorderconfimations_confirmation_code"
+                    android:textColor="#fff"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/button_dialogorderconfimations_confirm" android:layout_toRightOf="@+id/textview2"/>
+
+
+            <Button
+                    android:text="re-send"
+                    android:background="@drawable/button_state_list_animator"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:textSize="12sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/recyclerView_dialogorderconfimations_orders"
+                    app:fontFamily="@font/roboto_light"
+                    android:layout_toEndOf="@+id/button_dialogorderconfimations_confirm"
+                    android:textColor="#fff"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/button_dialogorderconfimations_resend" android:layout_toRightOf="@+id/textview2"/>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+

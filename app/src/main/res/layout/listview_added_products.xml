@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                   android:id="@+id/card_view"
+                                   style="@style/CardViewStyle"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_alignParentTop="true"
+                                   android:layout_centerVertical="true"
+                                   android:layout_marginLeft="5dp"
+                                   android:layout_marginRight="5dp"
+                                   android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+            android:id="@+id/relativeLayout_header_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:elevation="5dp">
+
+
+        <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+            <TextView
+                    android:id="@+id/textview_added_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto"
+                    android:layout_centerVertical="true"
+                    android:text="dsddsdsdsdsdsd"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
+
+            <TextView
+                    android:id="@+id/textview_added_product_qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto"
+                    android:layout_centerVertical="true"
+                    android:text="50"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toEndOf="@+id/textview_added_product"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    android:layout_toRightOf="@+id/textview_added_product"/>
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+                android:id="@+id/imageView_delete"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toEndOf="@+id/relativeLayout1"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_delete_red"
+                android:layout_toRightOf="@+id/relativeLayout1" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+

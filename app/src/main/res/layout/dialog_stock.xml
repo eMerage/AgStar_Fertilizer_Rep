@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relativelayoutdailogmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog_background">
+
+
+
+    <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="PRODUCT STOCKQUANTITY"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp" android:layout_marginLeft="10dp"/>
+
+
+
+    <RelativeLayout
+            android:id="@+id/relativeLayout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/textview1">
+
+        <TextView
+                android:id="@+id/textview_stack_product_qty_productname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontFamily="@font/roboto"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" android:layout_marginLeft="20dp"/>
+
+
+        <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Quantity"
+                android:layout_below="@+id/textview_stack_product_qty_productname"
+                app:fontFamily="@font/roboto_light"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"
+                android:id="@+id/editText_stack_product_qty"
+                android:layout_marginLeft="20dp" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+            android:id="@+id/relativeLayout_stock_images"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/relativeLayout_1">
+
+
+        <ImageView
+                android:id="@+id/imageView_sock_selected_image"
+                android:layout_width="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/noimage"
+                android:layout_height="100dp"/>
+
+
+
+        <ImageView
+                android:id="@+id/imageView_stock_image_gallery_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_gallery_green"/>
+
+
+
+
+
+
+
+        <ImageView
+                android:id="@+id/imageView_stock_image_cam_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_camera_green"/>
+        
+
+    </RelativeLayout>
+
+
+    <Button
+            android:id="@+id/button_stock_product_qty"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/relativeLayout_stock_images"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_state_list_animator"
+            android:text="Add more"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            app:fontFamily="@font/roboto_light" />
+
+
+
+</RelativeLayout>
+
+
+

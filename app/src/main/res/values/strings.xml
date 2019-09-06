@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Fertilizer Field Functions</string>
+    <string name="default_notification_channel_id">215555555</string>
+
+    <string name="menu_visits">Visits</string>
+    <string name="menu_dealer">Dealers</string>
+    <string name="menu_product">Product</string>
+    <string name="menu_order_confirmation">Order Confirmation</string>
+    <string name="menu_logout">Logout</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Fertilizer Field</string>
+    <string name="nav_header_subtitle">Functions</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="home_tab_1">Order</string>
+    <string name="home_tab_2">Payment</string>
+    <string name="home_tab_3">Stock</string>
+    <string name="home_tab_4">Complain</string>
+
+
+    <string name="delivery_type_prompt">Delivery Type</string>
+    <string-array name="delivery_type_arr">
+        <item>Company</item>
+        <item>Dealer</item>
+    </string-array>
+
+    <string name="payment_type_prompt">Payment Type</string>
+    <string-array name="payment_type_arr">
+        <item>Cash</item>
+        <item>Cheque</item>
+    </string-array>
+
+
+</resources>

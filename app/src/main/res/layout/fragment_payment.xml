@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+
+
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/progressBar_payments"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="VISITS CODE  "
+                android:textColor="@color/colorPrimaryDark"
+                app:fontFamily="@font/roboto_bold"
+                android:textSize="16sp"
+                android:id="@+id/textView2"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"/>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                app:fontFamily="@font/roboto_light"
+                android:textSize="16sp"
+                android:id="@+id/visitscode_payment"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/textView2"
+                android:layout_toRightOf="@+id/textView2"/>
+
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/visitscode_payment">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <RelativeLayout android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/card_view_delivery_type"
+                            style="@style/CardViewStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:visibility="visible"
+                            app:cardBackgroundColor="#ffffff"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp">
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#fff"
+                                android:elevation="5dp">
+
+
+                            <TextView
+                                    android:id="@+id/textview4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="PAYMENT"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    app:fontFamily="@font/roboto"
+                                    android:textSize="16sp"/>
+
+
+                            <TextView
+                                    android:id="@+id/textview5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_below="@+id/textview4"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:text="ORDER NUMBER"
+                                    android:textColor="#000"
+                                    app:fontFamily="@font/roboto"
+                                    android:textSize="15sp"/>
+
+
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:hint="Invoice No"
+                                    android:layout_marginTop="5dp"
+                                    app:fontFamily="@font/roboto_light"
+                                    android:textSize="15sp"
+                                    android:layout_below="@+id/textview5"
+                                    android:ems="10"
+                                    android:id="@+id/editText_ordernumber"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"/>
+
+
+                            <TextView
+                                    android:id="@+id/textview6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_below="@+id/editText_ordernumber"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:text="PAYMENT TYPE"
+                                    android:textColor="#000"
+                                    app:fontFamily="@font/roboto"
+                                    android:textSize="15sp"/>
+
+
+                            <Spinner
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:entries="@array/payment_type_arr"
+                                    android:layout_below="@+id/textview6"
+                                    android:id="@+id/spinner_payment_payment_type"/>
+
+
+                            <TextView
+                                    android:id="@+id/textview7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_below="@+id/spinner_payment_payment_type"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:text="VALUE"
+                                    android:textColor="#000"
+                                    app:fontFamily="@font/roboto"
+                                    android:textSize="15sp"/>
+
+
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="numberDecimal"
+                                    android:hint="Order Value"
+                                    android:layout_marginTop="5dp"
+                                    app:fontFamily="@font/roboto_light"
+                                    android:layout_below="@+id/textview7"
+                                    android:ems="10"
+                                    android:textSize="15sp"
+                                    android:id="@+id/editText_payment_value"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"/>
+
+
+                            <TextView
+                                    android:id="@+id/textview8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_below="@+id/editText_payment_value"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:text="IMAGE"
+                                    android:textColor="#000"
+                                    app:fontFamily="@font/roboto"
+                                    android:textSize="14sp"/>
+
+
+                            <RelativeLayout
+                                    android:id="@+id/relativeLayout_paymentmages"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_below="@+id/textview8">
+
+
+                                <ImageView
+                                        android:id="@+id/imageView_payment_image"
+                                        android:layout_width="100dp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="15dp"
+                                        android:src="@drawable/noimage"
+                                        android:layout_height="100dp"/>
+
+
+
+                                <ImageView
+                                        android:id="@+id/imageView_payment_image_gallery_icon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_above="@+id/divider2"
+                                        android:layout_marginRight="10dp"
+                                        android:src="@drawable/ic_gallery_green"/>
+
+
+
+                                <View
+                                        android:id="@+id/divider2"
+                                        android:layout_width="match_parent"
+                                        android:layout_centerVertical="true"
+                                        android:layout_height="1dp"/>
+
+
+
+                                <ImageView
+                                        android:id="@+id/imageView_payment_image_cam_icon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/divider2"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginRight="10dp"
+                                        android:src="@drawable/ic_camera_green"/>
+
+
+                            </RelativeLayout>
+
+
+                            <Button
+                                    android:id="@+id/button_add_payment"
+                                    android:layout_width="130dp"
+                                    android:layout_height="40dp"
+                                    android:layout_below="@+id/relativeLayout_paymentmages"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="@drawable/button_state_list_animator"
+                                    android:text="Add more"
+                                    android:textColor="#fff"
+                                    android:textSize="12sp"
+                                    app:fontFamily="@font/roboto_light" />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/card_view_added_payment"
+                            style="@style/CardViewStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/card_view_delivery_type"
+                            android:layout_alignParentRight="true"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#ffffff"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp">
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#fff"
+                                android:elevation="5dp">
+
+
+                            <TextView
+                                    android:id="@+id/textview9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="ADDED PAYMENT"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    app:fontFamily="@font/roboto"
+                                    android:textSize="16sp"/>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerView_added_payment"
+                                    android:layout_width="match_parent"
+                                    android:layout_below="@id/textview9"
+                                    android:orientation="horizontal"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    android:layout_height="wrap_content"/>
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <Button
+                            android:id="@+id/button_save_payment"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/card_view_added_payment"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/button_state_list_animator"
+                            android:text="confirm ORDER"
+                            android:textColor="#fff"
+                            android:textSize="12sp"
+                            app:fontFamily="@font/roboto_light" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
