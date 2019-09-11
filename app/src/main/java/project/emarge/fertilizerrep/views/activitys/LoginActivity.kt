@@ -39,10 +39,6 @@ class LoginActivity : AppCompatActivity() {
 
         bindingLogin.login!!.checkUserCredential().observe(this, Observer<Boolean> {
             it?.let { result ->
-
-
-
-
                 if (result) {
                     val intent = Intent(this, VisitsActivity::class.java)
                     val bndlanimation =
@@ -78,6 +74,7 @@ class LoginActivity : AppCompatActivity() {
                                 Toast.makeText(this, "Welcome " + resultUser.name, Toast.LENGTH_LONG).show()
                             } else {
                                 button.visibility = View.VISIBLE
+
                                 val alertDialogBuilder = AlertDialog.Builder(this)
                                 alertDialogBuilder.setTitle(resultUser.loginNetworkError.errorTitle)
                                 alertDialogBuilder.setMessage(resultUser.loginNetworkError.errorMessage)

@@ -37,6 +37,10 @@ class VisitsAdaptor(val items: ArrayList<Visits>, val context: Context) :
         holder?.textviewTime?.text = itemPostion.visitsDate?.substring(11)
         holder?.relativeLayoutVisitsPoducts.visibility = View.VISIBLE
 
+
+        holder?.textviewRep?.text = itemPostion.visitsRepName
+
+
         if (itemPostion.visitsOrder.productsList.isEmpty()) {
             holder?.relativeLayoutOrder.visibility = View.GONE
             var listEmptyPro = ArrayList<Products>()
@@ -91,6 +95,9 @@ class VisitsAdaptor(val items: ArrayList<Visits>, val context: Context) :
         val textviewPaymentType = view.textview_paymenttype
         val textviewDealerCode = view.textview_dealer_code
         val textviewTime = view.textview_time
+
+        val textviewRep = view.textview_rep
+
 
 
         val textviewOrderstatus = view.textview_orderstatus

@@ -26,8 +26,12 @@ class LoginRepo(application: Application) {
 
 
     var encryptedPreferences: EncryptedPreferences=EncryptedPreferences.Builder(application).withEncryptionPassword("122547895511").build()
+
     private val USER_ID = "userID"
     private val USER_REMEMBER = "userRemember"
+
+
+
 
     var app: Application = application
     var networkErrorHandler: NetworkErrorHandler = NetworkErrorHandler()

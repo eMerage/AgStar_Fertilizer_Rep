@@ -71,8 +71,11 @@ class VisitsActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         bindingVisits = DataBindingUtil.setContentView(this, R.layout.activity_visits)
         bindingVisits.lifecycleOwner = this
+
+
         vieModel = ViewModelProviders.of(this).get(VisitsViewModel::class.java)
         bindingVisits.visits =vieModel
 

@@ -2,7 +2,7 @@ package project.emarge.fertilizerrep.model.datamodel
 
 import com.google.gson.annotations.SerializedName
 
-data class NetworkError (
+data class NetworkError(
 
     var code: Int = 0,
 
@@ -10,8 +10,9 @@ data class NetworkError (
     var errorCode: String? = null,
 
     @SerializedName("description")
-     var errorMessage: String? = null,
+    var errorMessage: String? = null,
 
     @SerializedName("type")
-     var errorTitle: String? = null ) {}
+    var errorTitle: String? = null
+) {}
 

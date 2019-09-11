@@ -132,13 +132,43 @@
                 android:visibility="visible"/>
 
 
+
+        <TextView
+                android:id="@+id/montserratRegular6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/montserratRegular51"
+                android:layout_alignStart="@+id/montserratRegular3"
+                android:layout_alignLeft="@+id/montserratRegular3"
+                android:layout_marginTop="5dp"
+                app:fontFamily="@font/roboto_bold"
+                android:text="Rep  "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+        <TextView
+                android:id="@+id/textview_rep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontFamily="@font/roboto_light"
+                android:layout_alignStart="@+id/textview_visitcode"
+                android:layout_alignLeft="@+id/textview_visitcode"
+                android:layout_alignTop="@+id/montserratRegular6"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+
+
         <RelativeLayout
                 android:id="@+id/relativeLayout_order"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                android:layout_below="@+id/montserratRegular51">
+                android:layout_below="@+id/montserratRegular6">
 
             <TextView
                     android:id="@+id/montserratRegular8"
