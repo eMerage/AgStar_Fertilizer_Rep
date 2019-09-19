@@ -45,6 +45,8 @@ class ProductsAdaptor(val items: ArrayList<Products>, val context: Context) :
         }
         override fun onClick(p0: View?) {
             mClickListener.onClick( items[adapterPosition], p0!!)
+
+
         }
     }
 }

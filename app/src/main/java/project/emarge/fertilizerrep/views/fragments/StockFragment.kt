@@ -121,14 +121,7 @@ class StockFragment : Fragment() {
             getSearchProducts(autoCompleteTextView_staock_products.text.toString())
         }
 
-        spinner_stock_pro_cat.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onNothingSelected(p0: AdapterView<*>?) {}
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                var selectedProductsCategory: ProductsCategory = parent.getItemAtPosition(position) as ProductsCategory
-                selectedProCategoryID = selectedProductsCategory.productsID!!
-                getProducts(selectedProCategoryID)
-            }
-        }
+
 
         button_stock_save.setOnClickListener {
             if (saveButtonEnable) {
@@ -199,6 +192,15 @@ class StockFragment : Fragment() {
                     R.layout.item_spinner, listProCat
                 )
                 spinner_stock_pro_cat.adapter = adapter
+
+                spinner_stock_pro_cat.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                    override fun onNothingSelected(p0: AdapterView<*>?) {}
+                    override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+                        var selectedProductsCategory: ProductsCategory = parent.getItemAtPosition(position) as ProductsCategory
+                        selectedProCategoryID = selectedProductsCategory.productsID!!
+                        getProducts(selectedProCategoryID)
+                    }
+                }
             }
         })
 

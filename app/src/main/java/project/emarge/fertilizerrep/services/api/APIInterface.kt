@@ -63,20 +63,19 @@ interface APIInterface {
     abstract fun confirmOrder(@Body nfo: JsonObject): Observable<Orders>
 
 
-    @POST("Visit/SavePaymentVisit")
-    abstract fun savePaymentVisit(@Body nfo: JsonObject): Observable<Int>
 
 
-    @POST("Visit/SaveStockVisit")
-    abstract fun saveStockVisit(@Body nfo: JsonObject): Observable<Int>
+
+    @POST("Visit/SavePaymentVisitV2")
+    abstract fun savePaymentVisitWithImageDetails(@Body nfo: JsonObject): Observable<Int>
 
 
-    @POST("Visit/SaveComplainVisit")
-    abstract fun saveComplainVisit(@Body nfo: JsonObject): Observable<Int>
+    @POST("Visit/SaveStockVisitV2")
+    abstract fun saveStockVisitWithImageDetails(@Body nfo: JsonObject): Observable<Int>
 
 
-    @POST("Image/SaveImageDetails")
-    abstract fun saveImageDetails(@Body nfo: JsonArray): Observable<Image>
+    @POST("Visit/SaveComplainVisitV2")
+    abstract fun saveComplainVisitWithImageDetails(@Body nfo: JsonObject): Observable<Int>
 
 
 

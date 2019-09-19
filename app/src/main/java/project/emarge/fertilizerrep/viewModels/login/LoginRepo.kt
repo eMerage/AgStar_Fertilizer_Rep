@@ -93,6 +93,7 @@ class LoginRepo(application: Application) {
         buttonVisibale.set(false)
 
         FirebaseInstanceId.getInstance().instanceId.addOnCompleteListener(OnCompleteListener { task ->
+
             apiInterface.validateUser(user.value.toString(), password.value.toString(), 2, task.result?.token!!)
                 .subscribeOn(Schedulers.io())
                 .doOnError { it }

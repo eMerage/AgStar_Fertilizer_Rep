@@ -270,6 +270,8 @@ class OrderFragment : Fragment(), DatePickerDialog.OnDateSetListener {
                     result
                 )
                 autoCompleteTextView_order_products.setAdapter(autoCompleteProductsAdapter)
+
+
                 productsAdaptor.setOnItemClickListener(object : ProductsAdaptor.ClickListener {
                     override fun onClick(products: Products, aView: View) {
                         openDialogProductQty(products)
