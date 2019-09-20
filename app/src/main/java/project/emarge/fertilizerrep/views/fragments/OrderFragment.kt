@@ -62,8 +62,8 @@ class OrderFragment : Fragment(), DatePickerDialog.OnDateSetListener {
     private lateinit var pageViewModel: OrderViewModel
 
 
-    private var selectedDeliveryType: String = "Company"
-    private var selectedPaymentType: String = "Cash"
+    private var selectedDeliveryType: String = "Dealer"
+    private var selectedPaymentType: String = "Cheque"
 
 
     var saveButtonEnable: Boolean = true
@@ -102,21 +102,14 @@ class OrderFragment : Fragment(), DatePickerDialog.OnDateSetListener {
 
 
 
-        spinner_order_pro_cat.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onNothingSelected(p0: AdapterView<*>?) {}
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                var selectedProductsCategory: ProductsCategory = parent.getItemAtPosition(position) as ProductsCategory
-                selectedProCategoryID = selectedProductsCategory.productsID!!
-                getProducts(selectedProCategoryID)
-            }
 
-        }
 
 
         autoCompleteTextView_order_products.onItemClickListener =
             AdapterView.OnItemClickListener { parent, _, position, _ ->
                 var selectedPro: Products = parent.getItemAtPosition(position) as Products
                 getSearchProducts(selectedPro.productsCode.toString())
+                autoCompleteTextView_order_products.setText("")
             }
 
 
@@ -139,7 +132,8 @@ class OrderFragment : Fragment(), DatePickerDialog.OnDateSetListener {
         }
 
 
-        val myStrings = arrayOf("Company", "Dealer")
+
+        val myStrings = arrayOf("Dealer", "Company")
         spinner_delivery_type.adapter = ArrayAdapter(context as Activity, R.layout.list_bg_spinner, myStrings) as SpinnerAdapter?
 
 
@@ -153,7 +147,7 @@ class OrderFragment : Fragment(), DatePickerDialog.OnDateSetListener {
 
 
 
-        val myStringspayment_type = arrayOf("Cash", "Cheque")
+        val myStringspayment_type = arrayOf("Cheque", "Cash")
         spinner_order_payment_type.adapter = ArrayAdapter(context as Activity, R.layout.list_bg_spinner, myStringspayment_type)
 
 
@@ -229,6 +223,17 @@ class OrderFragment : Fragment(), DatePickerDialog.OnDateSetListener {
                     R.layout.item_spinner, listProCat
                 )
                 spinner_order_pro_cat.adapter = adapter
+
+                spinner_order_pro_cat.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                    override fun onNothingSelected(p0: AdapterView<*>?) {}
+                    override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+                        var selectedProductsCategory: ProductsCategory = parent.getItemAtPosition(position) as ProductsCategory
+                        selectedProCategoryID = selectedProductsCategory.productsID!!
+                        getProducts(selectedProCategoryID)
+
+                    }
+
+                }
             }
         })
 

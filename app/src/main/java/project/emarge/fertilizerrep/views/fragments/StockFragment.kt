@@ -114,6 +114,7 @@ class StockFragment : Fragment() {
             AdapterView.OnItemClickListener { parent, _, position, _ ->
                 var selectedPro: Products = parent.getItemAtPosition(position) as Products
                 getSearchProducts(selectedPro.productsCode.toString())
+                autoCompleteTextView_staock_products.setText("")
             }
 
 
@@ -187,10 +188,13 @@ class StockFragment : Fragment() {
                 var listProCat = ArrayList<ProductsCategory>()
                 listProCat.add(ProductsCategory(0, "All"))
                 listProCat.addAll(result)
+
+
                 val adapter = ProductCatSpinnerAdapter(
                     context as Activity,
                     R.layout.item_spinner, listProCat
                 )
+
                 spinner_stock_pro_cat.adapter = adapter
 
                 spinner_stock_pro_cat.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -244,6 +248,7 @@ class StockFragment : Fragment() {
                     R.id.lbl_name,
                     result
                 )
+
                 autoCompleteTextView_staock_products.setAdapter(autoCompleteProductsAdapter)
                 productsAdaptor.setOnItemClickListener(object : ProductsAdaptor.ClickListener {
                     override fun onClick(products: Products, aView: View) {

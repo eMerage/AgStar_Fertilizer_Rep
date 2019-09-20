@@ -132,6 +132,7 @@ class ComplaintFragment : Fragment() , DatePickerDialog.OnDateSetListener{
         autoCompleteTextView_complain_products.onItemClickListener = AdapterView.OnItemClickListener { parent, _, position, _ ->
             var selectedPro : Products = parent.getItemAtPosition(position) as Products
             getSearchProducts(selectedPro.productsCode.toString())
+            autoCompleteTextView_complain_products.setText("")
 
         }
 

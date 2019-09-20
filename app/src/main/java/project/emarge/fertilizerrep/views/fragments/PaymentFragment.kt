@@ -67,7 +67,7 @@ class PaymentFragment : Fragment() {
     lateinit var pageViewModel: PaymentViewModel
 
 
-    private var selectedPaymentType: String = "Cash"
+    private var selectedPaymentType: String = "Cheque"
     var selectedImagefilePath: Uri = Uri.EMPTY
 
 
@@ -93,7 +93,8 @@ class PaymentFragment : Fragment() {
 
 
 
-        val myStringspayment_type = arrayOf("Cash", "Cheque")
+
+        val myStringspayment_type = arrayOf("Cheque", "Cash")
         root.spinner_payment_payment_type.adapter =
             ArrayAdapter(context as Activity, R.layout.list_bg_spinner, myStringspayment_type)
 

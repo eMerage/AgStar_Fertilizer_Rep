@@ -122,18 +122,24 @@ class HomeRepo(application: Application) {
 
                 }
             }
-            if (listPro.isEmpty()) {
-                for (item in listAllProducts) {
-                    var listProName = item.productsCode
-                    var patternProName = input
-                    var pattern = Pattern.compile(patternProName, Pattern.CASE_INSENSITIVE)
-                    var matcher = pattern.matcher(listProName)
-                    if (matcher.lookingAt()) {
-                        listPro.add(item)
+            try {
+                if (listPro.isEmpty()) {
+                    for (item in listAllProducts) {
+                        var listProName = item.productsCode
+                        var patternProName = input
+                        var pattern = Pattern.compile(patternProName, Pattern.CASE_INSENSITIVE)
+                        var matcher = pattern.matcher(listProName)
+                        if (matcher.lookingAt()) {
+                            listPro.add(item)
+                        }
                     }
+
                 }
+            } catch (ex: java.lang.Exception) {
+
 
             }
+
 
         }
 
@@ -411,7 +417,8 @@ class HomeRepo(application: Application) {
                 }
 
                 if ((selectedImagefilePath != Uri.EMPTY) && (filePath == "")) {
-                    Toast.makeText(app, "Image capture error,Please try again", Toast.LENGTH_LONG).show()
+                    Toast.makeText(app, "Image capture error,Please try again", Toast.LENGTH_LONG)
+                        .show()
                 } else {
 
                     addedPayments.add(pay)
@@ -582,7 +589,8 @@ class HomeRepo(application: Application) {
             }
 
             if (filePath == "") {
-                Toast.makeText(app, "Image capture error,Please try again", Toast.LENGTH_LONG).show()
+                Toast.makeText(app, "Image capture error,Please try again", Toast.LENGTH_LONG)
+                    .show()
             } else {
                 addedProduct.add(products)
                 var listReps = ArrayList<Products>()
@@ -781,7 +789,8 @@ class HomeRepo(application: Application) {
                 }
 
                 if ((selectedImagefilePath != Uri.EMPTY) && (filePath == "")) {
-                    Toast.makeText(app, "Image capture error,Please try again", Toast.LENGTH_LONG).show()
+                    Toast.makeText(app, "Image capture error,Please try again", Toast.LENGTH_LONG)
+                        .show()
                 } else {
                     addedComplain.add(com)
                     addedComplainLsit.postValue(addedComplain)
@@ -872,7 +881,6 @@ class HomeRepo(application: Application) {
 
         return data
     }
-
 
 
     fun saveComplainImage(complain: ArrayList<Complain>) {
