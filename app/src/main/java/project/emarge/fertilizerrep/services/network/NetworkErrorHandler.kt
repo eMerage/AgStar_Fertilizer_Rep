@@ -36,7 +36,7 @@ class NetworkErrorHandler {
                     err.code() == 431 -> "Request Header Fields Too Large !"
                     err.code() == 444 -> "No Response !"
                     err.code() == 499 -> "Client Closed Request !"
-                    err.code() == 500 -> "Internal Server Error !"
+                    err.code() == 500 -> "Apologies! We are unable to process your request at the moment. Please try in a few minutes. !"
                     err.code() == 501 -> "Not Implemented !"
                     err.code() == 502 -> "Bad Gateway !"
                     err.code() == 503 -> "Service Unavailable !"
@@ -54,7 +54,7 @@ class NetworkErrorHandler {
             }
             is SocketTimeoutException -> {
                 networkError.errorMessage = err.toString()
-                networkError.errorTitle = "Time Out !"
+                networkError.errorTitle = "Apologies! We are unable to process your request at the moment. Please try in a few minutes.!"
             }
             is IOException -> {
                 networkError.errorMessage = err.toString()

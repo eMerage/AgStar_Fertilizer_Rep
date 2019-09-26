@@ -380,7 +380,9 @@ class HomeRepo(application: Application) {
                 pay.paymentType = paymentType
                 pay.paymentValue = value.toDouble()
                 if (selectedImagefilePath == Uri.EMPTY) {
-
+                    pay.paymentImage = Uri.EMPTY
+                    pay.paymentImageName =""
+                    pay.paymentImagePath = ""
                 } else {
                     pay.isImageFromCamera = isCam
                     pay.paymentImage = selectedImagefilePath
